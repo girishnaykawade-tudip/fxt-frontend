@@ -1,0 +1,396 @@
+@import '../../theme/sass/auth';
+
+// register page responsive
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .register-form .first-name-textbox,.register-form .last-name-textbox{
+     width: 100%;
+   }
+  .register-form .ext-textbox-align {
+    width: 28%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 16vh);
+  }
+}
+
+
+@media screen and (min-height: 550px) and (max-height: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 38vh);
+  }
+}
+
+@media screen and (min-height: 450px) and (max-height: 549px) {
+  .register-form.auth-main{
+    height: calc(100% + 63vh);
+  }
+}
+
+
+.site-main {
+  //width: 800px;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+#dolar {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: #ff8a00;
+  border-radius: 5px;
+  color: #fff;
+  float: right;
+}
+
+.woocommerce table.shop_table {
+  border: 1px solid rgba(0,0,0,.1);
+  margin: 0 -1px 24px 0;
+  text-align: left;
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+table, td, th {
+  text-align: center;
+  //border: 1px solid black;
+  padding: 10px;
+}
+
+.table > thead > tr > th {
+border: none !important;
+}
+.table > tbody > tr > td {
+  border: none !important;
+  //border: 1px rgba(0, 0, 0, 0.55) solid;
+}
+
+.ng2-smart-row{
+  border-bottom: 2px solid rgba(128, 128, 128, 0.44) !important;
+}
+
+.table > thead{
+  //background: white;
+  //font-size: 18px;
+  //font-weight: 300;
+  //border: 2px solid gray;
+}
+
+.ng2-smart-action-delete-delete{
+  display: none;
+}
+
+.center-box{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 11111;
+
+  .head{
+    display: block;
+    width: 100%;
+    float: left;
+    position: relative;
+    //background: rgba(236, 238, 239, 0.98);
+    background: rgb(249, 249, 249);
+    padding: 7px;
+    text-align: center;
+    box-shadow: 0px 10px 7px #888888;
+    border-bottom: 1px solid rgba(236, 238, 239, 0.98);
+
+    i{
+      position: absolute;
+      padding: 6px;
+    }
+
+    .search{
+      padding-left: 33px;
+      border-radius: 20px;
+      width: 30%;
+      line-height: 20px;
+      color: #3d93cb;
+    }
+    //margin: 20px 0 15px 30px;
+  }
+
+  .fa-user-plus{
+    color: white;
+    position: relative;
+    float: left;
+    padding-top: 8px;
+    font-size: 20px;
+  }
+}
+
+.modal-dialog{
+  width: 35%;
+
+  .modal-content{
+    background: rgba(255, 255, 255, 0.67);
+    border: none;
+  }
+
+  .modal-body{
+    padding: 0;
+  }
+
+  .close{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    color: black !important;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .register-input, .register-password{
+    color: black !important;
+  }
+
+  form{
+    padding: 0 33px 30px 30px !important;
+  }
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+    opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+  }
+
+}
+
+.form-control:disabled{
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  color: #7d7d7d !important;
+}
+
+tr.ng2-smart-row.selected {
+  //background: rgba(236, 238, 239, 0.69) !important;
+}
+
+tr.ng2-smart-row:hover {
+  //background: rgba(236, 238, 239, 0.69) !important;
+}
+
+tbody > tr {
+  //background: #ccc !important;
+}
+
+a.ng2-smart-sort-link.sort{
+  font-weight: bold !important;
+  color: #7d7d7d !important;
+}
+
+.bank-details-bg{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/balance-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  display: block;
+
+  .menu{
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: rgb(195, 195, 195);
+    border-radius: 20px 20px 0 0;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+
+      .span-text{
+        display: block;
+        padding: 14px 14px 14px 0;
+        float: right;
+        color: white;
+      }
+
+      .span-text:first-child{
+        font-size: 29px;
+        padding: 10px;
+        font-weight: bold;
+        color: #a2d2e2;
+      }
+
+    img{
+      width: 100%;
+      margin-top: -15px;
+    }
+
+    div{
+      margin-top: -48px;
+    }
+  }
+
+  .balance-body{
+    width: 100%;
+    display: flex;
+    position: relative;
+    //background: rgba(235,237,238,0.57);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid #3d93cb;
+
+        .summary{
+          width: 70%;
+          padding: 10px;
+        }
+
+        .card-column{
+          width: 30%;
+          float: left;
+          //border: 1px solid;
+
+          .first{
+            width: 100%;
+            display: block;
+            text-align: center;
+            padding: 30px;
+            font-size: 20px;
+            color: #3d93cb;
+          }
+
+          .second{
+            display: block;
+            //width: 100%;
+            text-align: center;
+            margin: 10px;
+            //border: 1px solid;
+            margin: 10px 10px;
+            padding: 20px 0;
+            background: rgba(2, 117, 216, 0.21);
+            span{
+              display: block;
+              height: 35px;
+            }
+          }
+        }
+  }
+}
+
+.page-link {
+  background-color: white !important;
+  margin: 4px;
+}
+
+ul.ng2-smart-pagination.pagination {
+  margin-left: 56%;
+}
+
+.apps{
+  width: 100%;
+  text-align: center;
+  padding-top: 80px;
+  display: flex;
+  .content{
+    width: 93%;
+    padding: 30px 0 0 30px;
+    text-align: justify;
+    font-size: 10px;
+  }
+
+  .call-center {
+    width: 30%;
+    float: right;
+    text-align: right;
+    margin-right: 25px;
+    div {
+      color: white;
+      text-align: left;
+      padding: 10px;
+      border-radius: 8px 0 0 0;
+      background: orange;
+      width: 18%;
+      position: absolute;
+      bottom: 0;
+      right: 55px;
+    }
+    img{
+      position: relative;
+      width: 29%;
+    }
+  }
+}
+
+.heads{
+  display: flex;
+  width: 50%;
+  font-size: 12px;
+  text-align: center;
+  flex-direction: column;
+      span{
+        text-align: center;
+        padding: 10px;
+      }
+  //display: block;
+  //border: 1px solid #949494;
+  //width: 31%;
+  //float: left;
+  //height: 29px;
+  //background-color: rgba(204, 204, 204, 0.57);
+  //background-color: #ccc;
+  //padding: 4px;
+  //font-size: 12px;
+  //text-align: center;
+  //border-radius: 5px 5px 0 0;
+}
+
+.extra{
+  //-webkit-box-shadow: 0px 0px 47px 3px rgba(0,0,0,0.57);
+  //-moz-box-shadow: 0px 0px 47px 3px rgba(0,0,0,0.57);
+  //box-shadow: 0px 17px 47px 3px rgba(0,0,0,0.57);
+  margin-top: -5px;
+  height: 40px;
+  width: 35%;
+  border-radius: 0;
+}
+
+
+.feed-bg {
+  width: 30%;
+  height: 56px;
+  background-image: url(/assets/img/wids.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  margin-bottom: -2%;
+  z-index: 11111;
+}
+
+.trans-head{
+  width: 24%;
+  position: absolute;
+  display: block;
+  float: left;
+  text-align: center;
+
+  span{
+    width: 50%;
+    display: block;
+    float: left;
+    word-break: break-word;
+    color: #71bfed;
+  }
+
+  span:first-child{
+    color: white;
+  }
+
+ }

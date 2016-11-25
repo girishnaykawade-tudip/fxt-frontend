@@ -1,0 +1,44 @@
+<div class="set-bg" style="height: auto; position: absolute;">
+    <div class="full-width logo-head" >
+        <ba-back-page></ba-back-page>
+        <div class="logo-image">
+            <img src="/assets/img/fxt_logo.png">
+        </div>
+    </div>
+
+    <div class=" padding-zero col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div style="width: 100%; display: flex; flex-direction: column;">
+            <div class="padding-top-140px full-width" style="padding-top: 129px;">
+            </div>
+            <div style="text-align: center;" class="center-box" >
+                <h1>Prodcuts</h1>
+            </div>
+            <div class="center-box">
+                <div class="head">
+                    <input #search class="search" style="float: right; display: block" type="text" placeholder="Search..." (keyup)="onSearch(search.value)">
+                    <a href="/#/pages/add-product" ><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                   <!-- <a href="/#/pages/user-details" class="btn" > Card Details</a>-->
+                </div>
+                <ng2-smart-table [settings]="settings" [source]="source"
+                                 (deleteConfirm)="onDeleteConfirm($event)"
+                                 (editConfirm)="onSaveConfirm($event)"
+                                 (edit)="clicked($event)"
+                                 (delete)="more($event)">
+                </ng2-smart-table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="modal fade" tabindex="-1" [ngClass]="{'in': visibleAnimate}"-->
+     <!--[ngStyle]="{'display': visible ? 'block' : 'none', 'opacity': visibleAnimate ? 1 : 0}">-->
+    <!--<div class="modal-dialog">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-body">-->
+                <!--<button type="button" class="btn btn-default close" (click)="hide()"><i class="ion-close"></i></button>-->
+                <!--<add-user></add-user>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div *ngIf="visible" class="modal-backdrop fade" [ngClass]="{'in': visibleAnimate}" (click)="hide()"></div>-->

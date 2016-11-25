@@ -1,0 +1,76 @@
+<div class="bank-details-bg" style="height: auto; position: absolute;">
+    <div class=" padding-zero col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div style="width: 100%; display: flex; flex-direction: column;">
+            <div class="full-width" style="padding-top: 17%;">
+            </div>
+            <div class="center-box feed-bg" style="">
+                <div class="heads"><span><i class="fa fa-chevron-circle-down" aria-hidden="true"></i> Mi Cuenta</span></div>
+                <div class="heads"><span><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>Transferencia</span></div>
+                <div class="heads"><span><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>Supporte</span></div>
+            </div>
+            <div class="center-box">
+
+                <div class="menu">
+                    <span class="trans-head">
+                        <span>Transacciones Posteadas</span>
+                        <span>Transferencias Pendientes</span>
+                    </span>
+                    <img src="/assets/img/head.png">
+                <div>
+                    <span class="span-text">
+                        12,73 $
+                    </span>
+                    <span class="span-text">
+                        Saldo Disponible
+                    </span>
+
+                </div>
+                </div>
+                <div class="head">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input #search class="search" style="" type="text" placeholder="Filterar las transacciones.." (keyup)="onSearch(search.value)">
+                    <i class="fa fa-chevron-circle-down" aria-hidden="true" style="    margin-left: -27px;"></i>
+                    <!--<a href="/#/pages/add-user" ><i class="fa fa-user-plus" aria-hidden="true"></i></a>-->
+                </div>
+                <div class="balance-body">
+                    <div class="summary">
+                        <ng2-smart-table [settings]="settings" [source]="source"
+                                         (deleteConfirm)="onDeleteConfirm($event)"
+                                         (editConfirm)="onSaveConfirm($event)"
+                        >
+
+                        </ng2-smart-table>
+                    </div>
+                    <div class="card-column">
+                        <div class="first">Detalles de la tarjeta</div>
+                        <a href="/#/pages/cards?product_cat=Virtual">
+                            <div class="second" style="cursor: pointer" >
+                                <span>Virtual Card No</span>
+                                <span>XXX XXX XXXX 7596</span>
+                                <span>Click here for details</span>
+                            </div>
+                        </a>
+                        <a href="/#/pages/cards?product_cat=Physical">
+                            <div class="second" style="cursor: pointer" >
+                                <span>Physical Card No</span>
+                                <span>XXX XXX XXXX 7596</span>
+                                <span>Click here for details</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="apps">
+                <div class="content">
+                    La Tarjeta es emitida por Wave Crest Holdings Limited Gibraltar de conformidad y con la autorizacion de MasterCard International. MasterCard es una marca registrada de MasterCard Internacional. Wave Crest Holdings Limited es una institución de moneda electronica debidamente registrada por la Comision de Servicios Financieros de Gibraltar (Financial Services Commission, Gibraltar) Copyright (c) 2016, Todos los derechos reservados.
+                    <strong>The card is issued by Wave Crest Holdings Limited pursuant to a license from MasterCard International. MasterCard is a registered trademark of MasterCard International.
+                    Wave Crest Holdings Limited is a licensed electronic money institution by the Financial Services Commission, Gibraltar. Copyright (c) 2016, All Rights Reserved.</strong>
+                </div>
+                <div class="call-center" >
+                    <div> En Linea</div>
+                    <img src="/assets/img/call-center.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

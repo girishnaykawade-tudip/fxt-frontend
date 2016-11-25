@@ -1,0 +1,139 @@
+@import '../../theme/sass/auth';
+
+// responsive
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+  .auth-link {
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 350px) {
+  .login-form.auth-main{
+    height : calc(100% + 9vh)
+  }
+}
+
+@media screen and (min-width: 700px){
+  .col-xlg-3 {
+    //width: 19%;
+    //flex: 0 0 25%;
+  }
+
+  .equivalente{
+    //padding: 0.4vmin;
+  }
+  .price{
+    //margin-bottom: 3vmin !important;
+  }
+
+}
+@media screen and (min-width:300px) and (max-width: 736px) {
+
+  .price{
+    margin-bottom: 0 !important;
+  }
+
+}
+
+@media screen and (max-width: 454px) {
+  .price{
+    margin-bottom: 0 !important;
+  }
+
+  .equivale_dolar{
+    padding: 0 !important;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .col-md-4 {
+    width: 50%;
+  }
+  .container{
+    padding: 0;
+  }
+}
+
+
+
+  .add_to_cart_button{
+    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    line-height: 1.385;
+    border-radius: 100px;
+    border-style: none;
+    padding: 2px 22px;
+    margin-top: 15px;
+    float: right;
+    margin-right: 50px;
+    font-size: 13px;
+    //margin-left: 50px;
+    background: linear-gradient(0deg, #b2b2b2, #fff 60%);
+    -moz-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+    -webkit-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+    -ms-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+  }
+
+  .price{
+    display: block;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  //.animated.fadeIn .card-body:hover {
+  //  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  //  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  //  box-shadow: 0 0 10px rgba(0, 0, 0, 0.44);
+  //}
+
+
+  .cont_dolar{
+    float: left;
+    width: 100%;
+
+    .equivalente{
+      font-size: 11px;
+      font-weight: bold;
+      display: block;
+      //margin-bottom: 2px;
+    }
+
+    .equivale_dolar{
+      background: orange;
+      color: #fff;
+      border-radius: 3px;
+      font-weight: bold;
+      //font-size: 13px;
+      //width: 87%;
+      //margin-left: -7px;
+      //padding: 5px 50px 5px 8px;
+      border-radius: 3px;
+      border-bottom: 1px solid white;
+      margin-left: 0;
+      font-size: 1.7vmin;
+      width: 100%;
+      padding: 0.4vmin;
+    }
+
+  }
+
+  .card-body{
+
+    .btn:hover{
+      color: black;
+    }
+
+
+  }
+
+  .cards-bg {
+    background-image: url('/assets/img/cards-bg.jpg');
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: static;
+    flex-direction: column;
+  }

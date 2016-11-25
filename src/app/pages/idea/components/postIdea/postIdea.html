@@ -1,0 +1,35 @@
+
+<div class="row">
+  <div class="col-md-12">
+
+    <ba-card title="Post a Idea" baCardClass="with-scroll">
+      <div class="col-sm-2 idearow" >
+        <p class="editorlabel"><label>Idea</label></p>
+      </div>
+      <div class="col-sm-10 contentrow editor">
+        <textarea [(ngModel)]="mySnippets"  class="chkeditorIdeaContent " ></textarea>
+      </div>
+
+      <div class="col-sm-2">
+        <p class="editorlabel"><label class="description">Description</label></p>
+      </div>
+      <div class="col-sm-10 contentrow">
+        <ckeditor [(ngModel)]="ckeditorContent" class="chkeditorDescriptionContent" [config]="config"></ckeditor>
+      </div>
+
+      <div class="col-sm-2 idearow">
+        <p class="editorlabel"><label  class="categorytag">Category</label></p>
+      </div>
+      <div class="col-sm-10 contentrow">
+        <rl-tag-input [(ngModel)]="tags" placeholder="Enter Tags" class="chkeditorTaginput"></rl-tag-input>
+      </div>
+
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-10 postButtonMargin">
+        <button class="btn btn-default btn-auth postbutton" [disabled]="!mySnippets" tooltip="Post a Idea" type="submit" (click)="onSubmit(mySnippets,ckeditorContent)">Post</button>
+      </div>
+    </ba-card>
+
+  </div>
+</div>

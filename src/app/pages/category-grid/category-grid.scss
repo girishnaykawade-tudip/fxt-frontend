@@ -1,0 +1,182 @@
+@import '../../theme/sass/auth';
+
+// register page responsive
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .register-form .first-name-textbox,.register-form .last-name-textbox{
+     width: 100%;
+   }
+  .register-form .ext-textbox-align {
+    width: 28%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 16vh);
+  }
+}
+
+
+@media screen and (min-height: 550px) and (max-height: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 38vh);
+  }
+}
+
+@media screen and (min-height: 450px) and (max-height: 549px) {
+  .register-form.auth-main{
+    height: calc(100% + 63vh);
+  }
+}
+
+
+.site-main {
+  //width: 800px;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+#dolar {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: #ff8a00;
+  border-radius: 5px;
+  color: #fff;
+  float: right;
+}
+
+.woocommerce table.shop_table {
+  border: 1px solid rgba(0,0,0,.1);
+  margin: 0 -1px 24px 0;
+  text-align: left;
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+table, td, th {
+  //border: 1px solid black;
+  padding: 10px;
+}
+
+.table > tbody > tr > td {
+  border: 1px rgba(0, 0, 0, 0.55) solid;
+}
+
+.table > thead{
+  background: white;
+  font-size: 18px;
+  font-weight: 300;
+  border: 2px solid gray;
+}
+
+category-grid .ng2-smart-action-delete-delete{
+  display: none;
+}
+
+.center-box{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .head{
+    display: block;
+    width: 97%;
+    float: left;
+    position: relative;
+    margin: 20px 0 15px 30px;
+  }
+
+  .fa-user-plus{
+    color: white;
+    position: relative;
+    float: left;
+    padding-top: 8px;
+    font-size: 20px;
+  }
+}
+
+.modal-dialog{
+  width: 35%;
+
+  .modal-content{
+    background: rgba(255, 255, 255, 0.67);
+    border: none;
+  }
+
+  .modal-body{
+    padding: 0;
+  }
+
+  .close{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    color: black !important;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .register-input, .register-password{
+    color: black !important;
+  }
+
+  form{
+    padding: 0 33px 30px 30px !important;
+  }
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+    opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+  }
+
+}
+
+.form-control:disabled{
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  color: #7d7d7d !important;
+}
+
+tr.ng2-smart-row.selected {
+  background: rgba(236, 238, 239, 0.69) !important;
+}
+
+tr.ng2-smart-row:hover {
+  background: rgba(236, 238, 239, 0.69) !important;
+}
+
+tbody > tr {
+  background: #ccc !important;
+}
+
+
+.logo-head{
+  padding-top: 80px;
+  padding-left: 30px;
+  position: absolute;
+
+      .logo-image{
+        width: 90%;
+        float: right;
+        display: block;
+
+        img{
+          width: 15%;
+        }
+      }
+
+}

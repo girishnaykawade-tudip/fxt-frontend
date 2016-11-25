@@ -1,0 +1,43 @@
+.card-tile{
+  background: url("/assets/img/tile.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  //width: 80% !important;
+  width: 32vmin !important;
+}
+
+.middle-span{
+  margin-left: auto;
+  width: 75%;
+  margin-right: auto;
+}
+
+.apps {
+  width: 100%;
+  text-align: center;
+
+  .call-center {
+
+    width: 30%;
+    float: right;
+    text-align: right;
+    margin-right: 25px;
+    div {
+      color: white;
+      text-align: left;
+      padding: 10px;
+      border-radius: 8px 0 0 0;
+      background: orange;
+      width: 18%;
+      position: absolute;
+      bottom: 0;
+      right: 55px;
+    }
+
+    img {
+      position: relative;
+      width: 29%;
+    }
+
+  }
+}

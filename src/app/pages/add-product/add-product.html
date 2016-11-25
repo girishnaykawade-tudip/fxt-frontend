@@ -1,0 +1,67 @@
+<div class="set-bg" style="height: auto; position: absolute;" xmlns="http://www.w3.org/1999/html">
+    <div style="position: relative;top: 85px;display: flex">
+        <ba-back-page style="z-index: 1; margin-left: 30px;"></ba-back-page>
+        <div style="float: right;margin: auto"><img class="" style="width: 55%" src="/assets/img/fxt_logo.png"></div>
+    </div>
+    <div class="add-user" style=" position: relative; width: 100%; margin: 0 auto; float: left; display: flex;">
+    <div class="auth-main add-product register-form" style=" position:relative; width: 42%;height: 27%;margin: 0 auto;
+    padding-top: 100px; padding-bottom: 5px;    float: left;">
+    <div class="auth-block">
+        <div class="login-header-block">
+            <h1>Product Details</h1>
+        </div>
+        <div class="form-group" *ngIf="invalidInput">
+            <label for="inputError" class="">
+            </label>
+            <div class="col-sm-10" *ngIf="invalidInput" class="invalid-password">
+                <span [innerHTML]="registerError"></span>
+            </div>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal register-form float-left">
+
+            <div class="form-group row product-name-textbox"  [ngClass]="{'has-error': (!product_name.valid && product_name.touched), 'has-success': (product_name.valid && product_name.touched)}">
+                <input maxlength="50" [formControl]="product_name" class="register-input form-control"
+                       id="product_name" placeholder="Name">
+            </div>
+
+            <div class="form-group row product-description-textbox"
+                 [ngClass]="{'has-error': (!product_description.valid && product_description.touched), 'has-success': (product_description.valid && product_description.touched)}">
+                <textarea [formControl]="product_description" type="text" class="register-input form-control"
+                       id="product_description" placeholder="Description"></textarea>
+            </div>
+
+            <div class="form-group row product-price-textbox"
+            [ngClass]="{'has-error': (!product_price.valid && product_price.touched), 'has-success': (product_price.valid && product_price.touched)}">
+            <input maxlength="100" [formControl]="product_price" type="number" class="register-input form-control"
+            id="product_price" placeholder="Price">
+            </div>
+
+            <div class="form-group row SKU-textbox"
+            [ngClass]="{'has-error': (!SKU.valid && SKU.touched), 'has-success': (SKU.valid && SKU.touched)}">
+            <input maxlength="100" [formControl]="SKU" type="text" class="register-input form-control"
+            id="SKU" placeholder="SKU">
+            </div>
+
+
+
+             <div class="form-group row category-select" >
+                <select name="category_id"  style="width: 100%; padding: 5px" [formControl]="category_id">
+                        <option selected value="" disabled >Select Category</option>
+                        <option  *ngFor="let a of categoryList; let index = index" [selected]="categoryList[index]['category_name'] == 'Mobiles'" [value]= "categoryList[index]['id']" > {{ categoryList[index]['category_name'] }}</option>
+                  </select>
+
+            </div>
+
+
+
+             <div style="margin-bottom: -5px; margin-top: 35px;" class="form-group col-md-12 col-sm-12 padding-zero float-left full-width">
+                <div class="col-sm-12 col-md-12 padding-zero">
+                <button [disabled]="!form.valid || submitted" type="submit"  class="btn btn-default btn-auth">Submit</button>
+                </div>
+                </div>
+        </form>
+    </div>
+</div>
+    </div>
+
+    </div>

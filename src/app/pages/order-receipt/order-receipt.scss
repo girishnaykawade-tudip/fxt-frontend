@@ -1,0 +1,240 @@
+@import '../../theme/sass/auth';
+
+// register page responsive
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .register-form .first-name-textbox,.register-form .last-name-textbox{
+     width: 100%;
+   }
+  .register-form .ext-textbox-align {
+    width: 28%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 16vh);
+  }
+}
+
+
+@media screen and (min-height: 550px) and (max-height: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 38vh);
+  }
+}
+
+@media screen and (min-height: 450px) and (max-height: 549px) {
+  .register-form.auth-main{
+    height: calc(100% + 63vh);
+  }
+}
+
+.add-user {
+  .auth-block{
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+
+    .register-input{
+      color: #666666 !important;
+    }
+  }
+}
+
+.contet-block{
+  display: block;
+  padding: 15px;
+
+  .bank-details{
+    display: block;
+    width: 100%;
+    position: relative;
+    float: left;
+    margin-bottom: 15px;
+  }
+
+
+}
+
+.bank-main{
+  position: relative !important;
+  width: 93% !important;
+  height: 27% !important;
+  padding-top: 60px;
+  padding-bottom: 5px;
+  float: right;
+  padding-right: 10px;
+
+  p{
+    font-size: 16px;
+    display: block;
+    float: left;
+    padding: 15px 0;
+  }
+}
+
+.column-text{
+  width: 70%;
+  display: block;
+  position: relative;
+    .dashed{
+      border-right: 1px dashed rgba(128, 128, 128, 0.3);
+
+      span{
+        display: block;
+      }
+    }
+  .dashed-first{
+    font-size: 10px;
+  }
+  .dashed-second{
+    font-weight: bold;
+  }
+}
+
+.woocommerce table.shop_table {
+  border: 1px solid rgba(0, 0, 0, .1);
+  margin: 0 -1px 24px 0;
+  text-align: left;
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+table, td, th {
+  //border: 1px solid black;
+  padding: 10px;
+  width: 100%;
+}
+
+tr {
+  border: 1px solid;
+}
+
+.entry-content {
+  background-color: white;
+  padding: 40px;
+  margin-top: 40px;
+  height: 550px;
+
+  li {
+    list-style: none;
+    padding-top: 20px;
+  }
+
+  .button {
+    position: relative;
+    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    color: #949494;
+    line-height: 1.385;
+    text-align: right;
+    float: right;
+    border-radius: 100px;
+    border-style: none;
+    margin-top: 20px;
+    padding: 2px 18px;
+    font-size: 13px;
+    background: linear-gradient(0deg, #b2b2b2, #fff 60%);
+    -moz-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+    -webkit-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+    -ms-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+  }
+}
+
+.woocommerce table.shop_table th, .woocommerce-page table.shop_table th {
+  //font-family: 'Raleway';
+  color: #ff8a00;
+  font-weight: 700;
+  padding: 9px 12px;
+
+}
+
+.woocommerce table.shop_table td {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  padding: 6px 12px;
+  vertical-align: middle;
+  border-bottom: 1px #ccc solid;
+}
+
+.woocommerce table.shop_table th {
+  font-weight: 700;
+  padding: 9px 12px;
+  border-bottom: 1px #888 solid;
+}
+
+.table-block{
+  padding: 0;;
+  //border: 1px solid gray;
+  background: rgba(255, 252, 252, 0.84);
+}
+
+tr > td:first-child {
+  border-right: 1px solid;
+}
+
+tr > th:first-child {
+  border-right: 1px solid;
+}
+
+.btn-block{
+  position: relative;
+  display: block;
+  width: 100%;
+  float: left;
+  padding: 20px;
+  text-align: center;
+      a{
+        font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        color: #737373;
+        line-height: 1.385;
+        border-radius: 100px;
+        border-style: none;
+        padding: 2px 12px !important;
+        font-size: 12px;
+        background: linear-gradient(0deg, #b2b2b2, #fff 60%);
+        -moz-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+        -webkit-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+        -ms-transform: matrix(1.22412, 0, 0, 1.20302, 0, 0);
+      }
+}
+
+.order-bg{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/bg-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  display: block;
+}
+
+.apps{
+  width: 100%;
+  text-align: center;
+  padding-top: 0;
+  .call-center {
+    width: 30%;
+    float: right;
+    text-align: right;
+    margin-right: 25px;
+     div {
+      color: white;
+      text-align: left;
+      padding: 10px;
+      border-radius: 8px 0 0 0;
+      background: orange;
+      width: 18%;
+      position: absolute;
+      bottom: 0;
+      right: 55px;
+    }
+    img{
+      position: relative;
+      width: 29%;
+    }
+  }
+}

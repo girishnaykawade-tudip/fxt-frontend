@@ -1,0 +1,61 @@
+@import '../../theme/sass/auth';
+
+// register page responsive
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .register-form .first-name-textbox,.register-form .last-name-textbox{
+     width: 100%;
+   }
+  .register-form .ext-textbox-align {
+    width: 28%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 16vh);
+  }
+}
+
+
+@media screen and (min-height: 550px) and (max-height: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 38vh);
+  }
+}
+
+@media screen and (min-height: 450px) and (max-height: 549px) {
+  .register-form.auth-main{
+    height: calc(100% + 63vh);
+  }
+}
+
+.add-user {
+  .auth-block{
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+
+    .register-input{
+      color: #666666 !important;
+    }
+  }
+}
+
+
+.card-form{
+        position: relative;
+        padding-top: 30px;
+
+      .card-form-head {
+        h1{
+          background-color: #009aff;
+          padding: 10px;
+          color: white;
+          font-size: 23px;
+          text-align: left;
+        }
+      }
+}

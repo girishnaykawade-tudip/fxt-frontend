@@ -1,0 +1,72 @@
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade show in" id="myModal" role="dialog">
+
+    <div class="modal-dialog auth-main">
+      <!-- Modal content-->
+      <div class="modal-content register-2-address">
+        <div class="modal-header padding-zero">
+          <div class="main-page-status">
+            <div class="planhub-logo-header-main"><img src="../../../assets/img/planhu-logo.png"></div>
+            <div class="steps-main">
+              <div class="float-left">
+                <img class="float-left verified-icon-css" src="../../../assets/img/theme/icon-verified.svg">
+                <span class="create-your-account-text">Create your account</span>
+              </div>
+              <div class="float-left">
+                <img class="float-left verified-icon-css" src="../../../assets/img/theme/icon-verified.svg">
+                <span class="setup-your-company-text">Setup your company</span>
+              </div>
+              <div class="float-left">
+                <div class="current-number-circle float-left">
+                  <div class="number-layer">3</div>
+                </div>
+                <span class="create-your-account-text padding-right-zero">Invite subcontractors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body padding-zero">
+          <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="company-register-form">
+            <h3 class="header-text-location">
+              Let’s link up your subcontractors
+            </h3>
+            <p>
+              We’ll send them invitations to join your network on FXT.
+            </p>
+            <div class="file-upload-base">
+              <div class="file-upload-inside-base" *ngIf="fileUploaded"><div>{{fileName}}</div></div>
+              <div *ngIf="!fileUploaded" class="file-upload-inside-base" onclick="document.getElementById('input-file-upload').click(); return false;">
+                  <img src="../../../assets/img/icon-upload.svg"><br>
+                  <span class="inside-text">Upload or drop list of emails to bulk invite subcontractors. (CSV, Excel, etc.)</span>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 padding-zero">
+              <label class="company-input-label">Or enter email addresses manually</label>
+              <div class="col-md-12 col-sm-12 padding-zero tag-input-div">
+                <rl-tag-input [formControl]="inviteSubcontractorEmail" placeholder="Enter an email"
+                              [allowedTagsPattern]="validEmailPattern"
+                              [(ngModel)]="settings.recipients"
+                              class="tag-input" ></rl-tag-input>
+              </div>
+            </div>
+            <div class="previous-btn-div">
+              <a [routerLink]="['/pages/dashboard']" class="back-label">Skip for now</a>
+            </div>
+            <div class="next-btn-div send-invites-btn-div">
+              <button [disabled]="!form.valid || submitted" type="submit" class="btn btn-next btn-send-invites">Send Invites</button>
+            </div>
+
+            <input class="hide" id="input-file-upload" type="file"
+                   [ng-file-select]="options"
+                   (onUpload)="handleUpload($event)">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal-backdrop fade in"></div>
+

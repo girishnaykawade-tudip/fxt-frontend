@@ -1,0 +1,92 @@
+@import '../../../../theme/sass/conf/conf';
+.cke_source {
+  color: $dropdown-text!important;
+}
+.card-body{
+  padding-bottom: 0 !important;
+}
+.content-top{
+  padding-bottom: 5px !important;
+}
+.ckeditorIdea{
+  margin: 1% 0 1% 0;
+}
+#cke_1_contents{
+  height: 260px !important;
+}
+#cke_64_contents{
+  height: 260px !important;
+}
+.chkeditorIdeaContent{
+  width: 100%;
+  margin-bottom: 1%;
+  outline-color: #2196F3;
+}
+
+.ng2-tag-input-field{
+  outline: none !important;
+}
+.chkeditorTaginput{
+  margin-top:2%;
+}
+.chkeditorTaginput:focus{
+  outline:none !important;
+  border-color:#od8bff !important;
+}
+.postbutton{
+  margin-top: 1% !important;
+  margin-bottom: 1%;
+  background-color: #209e91 !important;
+  color: white !important;
+}
+.editorlabel{
+  text-align: right;
+}
+.categorytag{
+  margin-top: 10%;
+  text-align: left;
+}
+.idearow{
+  padding-top: 12px;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* For mobile phones: */
+  .col-sm-2 {
+    width: 100%;
+  }
+  .editorlabel {
+    text-align: left;
+    margin-bottom: 2%;
+  }
+  .postButtonMargin {
+    padding-right: 0;
+  }
+  .contentrow {
+    padding-right: 0 !important;
+  }
+  .col-sm-10 {
+    width: 100%;
+
+  }
+  .categorytag {
+    margin-top: 1%;
+  }
+
+  .chkeditorTaginput {
+    margin-top: 0% !important;
+  }
+
+}
+p {
+  color: #4C4949;
+  font-size: 14px;
+}
+
+.postButtonMargin{
+  margin-top:12px;
+  padding-right: 8%;
+}
+.contentrow{
+  padding-right: 8%;
+}

@@ -1,0 +1,89 @@
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade show in" id="companyRegister" role="dialog">
+    <div class="modal-dialog auth-main">
+      <!-- Modal content-->
+      <div class="modal-content register-2-address">
+        <div class="modal-header padding-zero">
+          <div class="main-page-status">
+            <div class="planhub-logo-header-main"><img src="../../../assets/img/planhu-logo.png"></div>
+            <div class="steps-main">
+              <div class="float-left register-step-first">
+                <img class="float-left verified-icon-css" src="../../../assets/img/theme/icon-verified.svg">
+                <span class="create-your-account-text">Create your account</span>
+              </div>
+              <div class="float-left">
+                <div class="current-number-circle float-left">
+                  <div class="number-layer">2</div>
+                </div>
+                <span class="setup-your-company-text">Setup your company</span>
+              </div>
+              <div class="float-left register-step-third">
+                <div class="next-number-circle float-left">
+                  <div class="number-layer">3</div>
+                </div>
+                <span class="create-your-account-text padding-right-zero">Invite subcontractors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body padding-zero float-left">
+          <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="company-register-form">
+            <h3 class="header-text-location">
+              Tell us about your company
+            </h3>
+            <p>
+              You’ll be able to change or update this information later.
+            </p>
+            <div class="company-info-main">
+              <div class="company-info-left">
+                <div class="base">
+                  <ba-card>
+                    <ba-picture-uploader class="float-left" [picture]="profile.picture" [defaultPicture]="defaultPicture" [uploaderOptions]="uploaderOptions"></ba-picture-uploader>
+                  </ba-card>
+                </div>
+                <div class="company-project-type" [ngClass]="{'has-error': (!constructionSector.valid && constructionSector.touched), 'has-success': (constructionSector.valid && constructionSector.touched)}">
+                  <label class="company-input-label margin-top-10px">Construction Sector</label>
+                  <select [formControl]="constructionSector" (change)="onChange($event.target.value)" class="form-control" id="constructionSector">
+                    <option selected="{{selected}}">Choose</option>
+                    <option *ngFor="let singleConstruction of constructionList" value="{{singleConstruction.id}}">{{singleConstruction.name}}</option>
+                  </select>
+                </div>
+                <div class="company-project-type" [ngClass]="{'has-error': (!projectType.valid && projectType.touched), 'has-success': (projectType.valid && projectType.touched)}">
+                  <label class="company-input-label margin-top-12px">Project Types</label>
+                  <select [disabled]="!constructionSectorSelected" [formControl]="projectType" class="form-control" id="projectType" value="Choose">
+                    <option selected="selected">Choose</option>
+                    <option *ngFor="let singleProject of projectTypeList" value="{{singleProject.id}}">{{singleProject.name}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="company-info-right">
+                <div class="col-md-12 col-sm-12 padding-zero" [ngClass]="{'has-error': (!companyName.valid && companyName.touched), 'has-success': (companyName.valid && companyName.touched)}">
+                  <label class="company-input-label">Company Name</label>
+                    <input [formControl]="companyName"  name="companyName" maxlength="50" type="text" class="location-check-input form-control" id="companyName" placeholder="Company Name" >
+                </div>
+                <div class="col-md-12 col-sm-12 padding-zero margin-top-10px" [ngClass]="{'has-error': (!companyDesc.valid && companyDesc.touched), 'has-success': (companyDesc.valid && companyDesc.touched)}">
+                  <label class="company-input-label">Company Description</label>
+                  <textarea [formControl]="companyDesc" name="companyDesc" maxlength="1000" type="text" class="location-check-input form-control" id="companyDesc" placeholder="Company Description" ></textarea>
+                </div>
+                <div class="col-md-12 col-sm-12 padding-zero margin-top-10px" [ngClass]="{'has-error': (!stateTag.valid && stateTag.touched), 'has-success': (stateTag.valid && stateTag.touched)}">
+                  <label class="company-input-label">States Covered</label>
+                  <div class="col-md-12 col-sm-12 padding-zero tag-input-div">
+                    <rl-tag-input [formControl]="stateTag" placeholder="Enter a state" (keyup)="autoFillStateList($event.target.value)" class="" ></rl-tag-input>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="previous-btn-div">
+              <a [routerLink]="['/pages/register2']" class="back-label">Go back</a>
+            </div>
+            <div class="next-btn-div">
+              <button [disabled]="!form.valid || submitted" type="submit" class="btn btn-next">Next</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade in"></div>

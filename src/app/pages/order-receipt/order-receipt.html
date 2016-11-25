@@ -1,0 +1,160 @@
+<div class="order-bg " style="height: auto; position: absolute;">
+    <div style="position: relative;top: 85px;display: flex">
+        <ba-back-page style="z-index: 1; margin-left: 30px;"></ba-back-page>
+    </div>
+    <div class="auth-main add-user bank-main register-form">
+        <div class="auth-block">
+            <div class="login-header-block">
+                <h1 style=" text-align: left;">Pedido recibido</h1>
+            </div>
+            <div class="contet-block">
+                <div>
+                    <p>Gracias. Tu pedido ha sido recibido.</p>
+                    <div class="column-text" style="width: 70%;">
+                <span class="col-sm-12 col-md-12">
+                <div class="col-sm-3 col-md-3 dashed">
+                    <span class="dashed-first">NÚMERO DE PEDIDO:</span>
+                    <span class="dashed-second">500</span>
+                </div>
+                <div class="col-sm-3 col-md-3 dashed">
+                    <span class="dashed-first">FECHA:</span>
+                    <span class="dashed-second">{{ date | date: 'dd- MMMM- yyyy' }}</span>
+                </div>
+                <div class="col-sm-3 col-md-3 dashed">
+                    <span class="dashed-first">TOTAL:</span>
+                    <span class="dashed-second">$ {{ Data['param4'] | number : '1.0-2' }}</span>
+                </div>
+                <div class="col-sm-3 col-md-3 dashed    ">
+                    <span class="dashed-first">MÉTODO DE PAGO:</span>
+                    <span class="dashed-second">Deposito en Efectivo en Banco Estado /Banco Itau</span>
+                </div>
+                </span>
+                    </div>
+                    <p>
+                        Realiza tu pago en efectivo en nuestra cuenta del Banco Estado o del Banco Itau. Por favor usa
+                        la referencia del pedido como referencia de pago. Te será acreditado en tu cuenta una vez se
+                        confirme el deposito en aproximandamente 20 mins despues de realizado el deposito en efectivo.
+                        En caso de que se demore mas comunicate por el chat de esta pagina, o a nuestros telefonos o
+                        correo electrónico.
+                    </p>
+                </div>
+                    <div>
+                        <p>Nuestros detalles bancarios</p>
+                      <div class="bank-details">
+                        <p>Inversiones Bilota Limitada - Banco Itau</p>
+                        <div class="column-text" style="width: 70%;">
+                                <span class="col-sm-12 col-md-12">
+                                        <div class="col-sm-3 col-md-3 dashed">
+                                            <span class="dashed-first">NÚMERO DE CUENTA:</span>
+                                            <span class="dashed-second">0202755295</span>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 dashed">
+                                            <span class="dashed-first">TIPO DE CUENTA:</span>
+                                            <span class="dashed-second">Cuenta Corriente</span>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 dashed">
+                                            <span class="dashed-first">IBAN:</span>
+                                            <span class="dashed-second">76.059.766-K</span>
+                                        </div>
+                                </span>
+                        </div>
+                      </div>
+
+
+                        <div class="bank-details">
+                            <p>FXT SOLUTIONS S.A. - Banco Estado</p>
+                                <div class="column-text" style="width: 70%;">
+                                    <span class="col-sm-12 col-md-12">
+                                        <div class="col-sm-3 col-md-3 dashed">
+                                            <span class="dashed-first">NÚMERO DE CUENTA:</span>
+                                            <span class="dashed-second">325-7-039286-6</span>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 dashed">
+                                            <span class="dashed-first">TIPO DE CUENTA:</span>
+                                            <span class="dashed-second">Cuenta Vista</span>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 dashed">
+                                            <span class="dashed-first">IBAN:</span>
+                                            <span class="dashed-second">76.551.775-3</span>
+                                        </div>
+                                     </span>
+                                </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Detalles del pedido</p>
+                        <div class="column-text" style="width: 90%;">
+                            <span class="col-sm-12 col-md-12 table-block">
+                                <table class="order-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="product-name col-sm-3 col-md-3">Product</th>
+                                            <th class="product-total col-sm-9 col-md-9">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="cart_item">
+                                            <td class="product-name col-sm-3 col-md-3">
+                                                <strong class="product-quantity">Cargar {{ Data['param1'] | number : '1.0-2' }} (F)</strong>
+                                            </td>
+                                            <td class="product-total col-sm-9 col-md-9">
+                                                <span class="amount">
+                                                    <span class="Price-currencySymbol">$</span> {{ Data['param1'] | number : '1.0-2' }}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+
+                                    <tfoot>
+                                        <tr class="cart-subtotal">
+                                            <th class="col-sm-3 col-md-3">Subtotal</th>
+                                            <td class="col-sm-9 col-md-9">
+                                                <span class="woocommerce-Price-amount amount">
+                                                    <span class="woocommerce-Price-currencySymbol">$</span> {{ Data['param1'] | number : '1.0-2' }}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="tax-total">
+                                            <th class="col-sm-3 col-md-3">Commission </th>
+                                            <td class="col-sm-9 col-md-9">
+                                                <span class="woocommerce-Price-amount amount">
+                                                    <span class="woocommerce-Price-currencySymbol"> $ </span> {{ Data['param3'] | number : '1.0-2' }}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="tax-total">
+                                            <th class="col-sm-3 col-md-3">Método de pago: </th>
+                                            <td class="col-sm-9 col-md-9">
+                                                <span class="woocommerce-Price-amount amount">
+                                                    <span class="woocommerce-Price-currencySymbol"> Deposito en Efectivo en Banco /Estado Banco Itau</span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="order-total">
+                                            <th class="col-sm-3 col-md-3">Total</th>
+                                            <td class="col-sm-9  col-md-9">
+                                                <strong><span class="woocommerce-Price-amount amount">
+                                                    <span class="woocommerce-Price-currencySymbol">$ </span> {{ Data['param4'] | number : '1.0-2' }}
+                                                </span></strong>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                             </span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="btn-block" (click) = "saveOrder(this)"><a class="btn">Realizar pedido</a></span>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="apps"  style="padding-top: 0;">
+        <div class="call-center" >
+            <div> En Linea</div>
+            <img src="/assets/img/call-center.png">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+@import '../../theme/sass/auth';
+
+// responsive
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+  .auth-link {
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 350px) {
+  .login-form.auth-main{
+    height : calc(100% + 9vh)
+  }
+}
+
+.has-error input{
+  border: 1px solid #ff3333;
+}
+

@@ -1,0 +1,62 @@
+@import '../../theme/sass/auth';
+
+.location-check-main-form{
+  float: left;
+  width: 100%;
+  padding: 0 24%;
+}
+
+.location-check-main-form label{
+  color: #7f8fa4;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+}
+
+// responsive css
+
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+
+  #register2 .location-checking-form{
+    height: auto;
+  }
+
+  #register2 .location-check-main-form{
+    padding: 0 3%;
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 600px) {
+
+  #register2 .first-name-textbox {
+    margin-right: 29px;
+  }
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 369px) {
+
+  #register2 .first-name-textbox {
+    margin-right: 24px;
+  }
+}
+
+
+@media screen and (min-width: 351px) and (max-width: 600px) {
+  #register2 .auth-main{
+    margin: 0 auto;
+    height: calc(100% - 4vh);
+  }
+}
+
+@media screen and (min-height: 450px) and (max-height: 600px) {
+  #register2 .auth-main{
+    margin: 0;
+    height: calc(100% + 9vh);
+  }
+
+  #register2 .margin-top-30px{
+    margin-top: 10px;
+  }
+}

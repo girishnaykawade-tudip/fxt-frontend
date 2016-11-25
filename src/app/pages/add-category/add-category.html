@@ -1,0 +1,53 @@
+<div class="set-bg" style="height: auto; position: absolute;" xmlns="http://www.w3.org/1999/html">
+    <div style="position: relative;top: 85px;display: flex">
+        <ba-back-page style="z-index: 1; margin-left: 30px;"></ba-back-page>
+        <div style="float: right;margin: auto"><img class="" style="width: 55%" src="/assets/img/fxt_logo.png"></div>
+    </div>
+    <div class="add-user" style=" position: relative; width: 100%; margin: 0 auto; float: left; display: flex;">
+    <div class="auth-main add-category register-form" style=" position:relative; width: 42%;height: 27%;margin: 0 auto;
+    padding-top: 100px; padding-bottom: 5px;    float: left;">
+    <div class="auth-block">
+        <div class="login-header-block">
+            <h1>Category Details</h1>
+        </div>
+        <div class="form-group" *ngIf="invalidInput">
+            <label for="inputError" class="">
+            </label>
+            <div class="col-sm-10" *ngIf="invalidInput" class="invalid-password">
+                <span [innerHTML]="registerError"></span>
+            </div>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal register-form float-left">
+
+            <div class="form-group row category-name-textbox"  [ngClass]="{'has-error': (!category_name.valid && category_name.touched), 'has-success': (category_name.valid && category_name.touched)}">
+                <input maxlength="50" [formControl]="category_name" type="text" class="register-input form-control"
+                       id="category_name" placeholder="Category Name">
+            </div>
+
+            <div class="form-group row category-description-textarea"
+                 [ngClass]="{'has-error': (!category_description.valid && category_description.touched), 'has-success': (category_description.valid && category_description.touched)}">
+                <textarea [formControl]="category_description" class="register-input form-control"
+                       id="category_description" placeholder="Category Description"></textarea>
+            </div>
+
+            <div class="form-group row category-isActive-select" >
+            <!--[ngClass]="{'has-error': (!category_description.valid && category_description.touched), 'has-success': (category_description.valid && category_description.touched)}">-->
+            <select name="category_isActive"  style="width: 100%; padding: 5px"
+                [formControl]="category_isActive" >
+               <option   selected value="" disabled>Select Category Status</option>
+                <option  value="true">Activate</option>
+                <option  value="false">In Activate</option>
+            </select>
+            </div>
+
+             <div style="margin-bottom: -5px; margin-top: 35px;" class="form-group col-md-12 col-sm-12 padding-zero float-left full-width">
+                <div class="col-sm-12 col-md-12 padding-zero">
+                <button [disabled]="!form.valid || submitted" type="submit" class="btn btn-default btn-auth">Submit</button>
+                </div>
+                </div>
+        </form>
+    </div>
+</div>
+    </div>
+
+    </div>

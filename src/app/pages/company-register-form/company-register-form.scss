@@ -1,0 +1,52 @@
+@import '../../theme/sass/auth';
+
+
+// responsive css
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .company-register-form{
+    width: 100%;
+    height: auto;
+  }
+
+  .company-info-main{
+    width: 100%;
+    height: auto;}
+
+  .company-info-left{
+    width: 100%;
+    float: left;
+    border-right: none;
+  }
+
+  .base{
+    height: auto;
+  }
+
+  .company-project-type{
+    width: 100%;
+  }
+
+  .company-info-right{
+    padding-left: 0;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .next-btn-div{
+    padding-top: 12px;
+    margin-bottom: 20px;
+  }
+
+  .previous-btn-div{
+    padding-top: 20px;
+  }
+
+  .company-register-form .ng2-tag-input-form input{
+    width: 100%;
+  }
+
+  #companyRegister .auth-main{
+    height: calc(100% + 30vh);
+  }
+}

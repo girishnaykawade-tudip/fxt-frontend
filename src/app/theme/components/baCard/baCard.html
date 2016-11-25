@@ -1,0 +1,21 @@
+<div baCardBlur class="animated fadeIn card card-tile{{cardType}} {{baCardClass || ''}}" zoom-in style="width: 32vmin !important;">
+    <!--<div *ngIf="title" class="card-header clearfix">-->
+        <!--<h3 style="font-weight: 600" class="card-title"> Cargar {{title | number : '1.0-2'}} ({{cardInital}})</h3>-->
+    <!--</div>-->
+    <div class="card-body" style="    padding: 3vmin 0 0 15.6%;
+    width: 97%;">
+        <li class="">
+            <h3 class="card-title" style="font-size: 2.5vmin; margin-bottom: 0vmin;"> Cargar {{title | number : '1.0-2'}}</h3>
+            <span class="price" style="font-size: 2.1vmin; margin-bottom: 2vmin;"><span class="">$ {{title | number : '1.0-2'}}</span></span>
+            <div class="cont_dolar">
+                <span class="equivalente"  style="font-size: 1.7vmin">Equivalente a </span>
+                <div class="equivale_dolar" style=" margin-left: 0;font-size: 1.7vmin; width: 100%;">
+                    <span>
+                        {{ title/cardRate | number : '1.2-2'}} USD
+                    </span>
+                </div>
+            </div><a rel="nofollow"  (click) = navigate(this)  data-quantity="1" data-product_id="10" data-product_sku="" style="font-size: 1.7vmin;    margin: 1.4vmin 14% 0 0;
+position: relative;
+    padding: 0.4vmin 10%;" class="btn button product_type_simple add_to_cart_button ajax_add_to_cart">enviar</a></li>
+    </div>
+</div>

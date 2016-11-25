@@ -1,0 +1,67 @@
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade show in" id="check-company-address" role="dialog">
+    <div class="modal-dialog auth-main">
+      <!-- Modal content-->
+      <div class="modal-content register-2-address">
+        <div class="modal-header padding-zero">
+          <div class="main-page-status">
+            <div class="planhub-logo-header-main"><img src="../../../assets/img/planhu-logo.png"></div>
+            <div class="steps-main">
+              <div class="float-left register-step-first">
+                <img class="float-left verified-icon-css" src="../../../assets/img/theme/icon-verified.svg">
+                <span class="create-your-account-text">Create your account</span>
+              </div>
+              <div class="float-left">
+                <div class="current-number-circle float-left">
+                  <div class="number-layer">2</div>
+                </div>
+                <span class="setup-your-company-text">Setup your company</span>
+              </div>
+              <div class="float-left register-step-third">
+                <div class="next-number-circle float-left">
+                  <div class="number-layer">3</div>
+                </div>
+                <span class="create-your-account-text padding-right-zero">Invite subcontractors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body padding-zero">
+          <form (ngSubmit)="onSubmit()" class="location-checking-form" >
+            <div class="location-check-main-form">
+              <h3 class="header-text-location">
+                We found a match. Is this your company?
+              </h3>
+              <p>
+                If not, don’t worry. You’ll be able to add it to Plahub in a snap.
+              </p>
+              <div class="show-company-div">
+                <div class="company-logo-div">
+                  <!--<img src="../../../assets/img/planhu-logo.png">-->
+                  <img src="http://api.planhub.com/images/logo/{{companyData.data.logo}}">
+                </div>
+                <div class="company-desc-div">
+                  <h3 class="company-name">
+                    {{companyData.data.companyName}}
+                  </h3>
+                  <p class="company-address">{{companyData.data.companyAddress.address}}, {{companyData.data.companyAddress.zipcode}}</p>
+                </div>
+              </div>
+              <div class="btn-company-main-div">
+                <div class="col-sm-6 col-md-6 padding-zero ">
+                  <a [routerLink]="['/pages/companyRegister']" ><button class="btn btn-default btn-nope">Nope</button></a>
+                </div>
+                <div class="col-sm-6 col-md-6 padding-zero ">
+                  <button [disabled]="submitted" type="submit" class="btn btn-default btn-yes">Yes, that’s it!</button>
+                </div>
+              </div>
+            </div>
+            <div class="try-different-adds-div"><a [routerLink]="['/pages/register2']" class="register-2-url">Try a different address</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade in"></div>

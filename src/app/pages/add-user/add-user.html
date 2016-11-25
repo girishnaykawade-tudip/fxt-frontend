@@ -1,0 +1,92 @@
+<div class="set-bg" style="height: auto; position: absolute;">
+    <div style="position: relative;top: 85px;display: flex">
+        <ba-back-page style="z-index: 1; margin-left: 30px;"></ba-back-page>
+        <div style="float: right;margin: auto"><img class="" style="width: 55%" src="/assets/img/fxt_logo.png"></div>
+    </div>
+    <div style=" position: relative; width: 100%; margin: 0 auto; float: left; display: flex;">
+    <div class="auth-main add-user register-form" style=" position:relative; width: 42%;height: 27%;margin: 0 auto;
+    padding-top: 100px; padding-bottom: 5px;    float: left;">
+    <div class="auth-block">
+        <div class="login-header-block">
+            <h1>Formulario de Afliliación</h1>
+        </div>
+        <div class="form-group" *ngIf="invalidInput">
+            <label for="inputError" class="">
+            </label>
+            <div class="col-sm-10" *ngIf="invalidInput" class="invalid-password">
+                <span [innerHTML]="registerError"></span>
+            </div>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal register-form float-left">
+
+            <div class="form-group row first-name-textbox"
+                 [ngClass]="{'has-error': (!firstname.valid && firstname.touched), 'has-success': (firstname.valid && firstname.touched)}">
+                <input maxlength="25" [formControl]="firstname" type="text" class="register-input form-control"
+                       id="firstname" placeholder="Nombre">
+            </div>
+
+            <div class="form-group row last-name-textbox"
+                 [ngClass]="{'has-error': (!email.valid && email.touched), 'has-success': (email.valid && email.touched)}">
+                <input maxlength="40" [formControl]="email" type="email" class="register-input form-control"
+                       id="emailId" placeholder="Dirección de correo electrónico">
+            </div>
+
+
+            <div class="form-group row"
+                 [ngClass]="{'has-error': (!bdate.valid && bdate.touched), 'has-success': (bdate.valid && bdate.touched)}">
+                <input max="{{ date | date: 'yyyy-MM-dd' }}" [formControl]="bdate" class="register-input form-control"
+                       id="inputbdate" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')">
+            </div>
+
+            <div class="form-group row"
+                 [ngClass]="{'has-error': (!rut.valid && rut.touched), 'has-success': (rut.valid && rut.touched)}">
+                <input maxlength="11"
+                       onkeyup="var x =this.value.replace(/\D/g, '').match(/(\d{0,9})(\d{0,1})/);
+                        this.value = !x[2] ? x[1] :  x[1] + '-' + x[2] + '' "
+                       [formControl]="rut" type="text" class="register-input form-control" id="rut" placeholder="RUT">
+            </div>
+
+            <div class="form-group row"
+                 [ngClass]="{'has-error': (!nationality.valid && nationality.touched), 'has-success': (nationality.valid && nationality.touched)}">
+                <input maxlength="40" [formControl]="nationality" type="text" class="register-input form-control"
+                       id="inputnationality" placeholder="Nacionalidad">
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-12 col-md-12 padding-zero">
+                    <div class="phone-number-div"
+                         [ngClass]="{'has-error': (!phoneNumber.valid && phoneNumber.touched), 'has-success': (phoneNumber.valid && phoneNumber.touched)}">
+                        <input maxlength="14"
+                               onkeyup="var x =this.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,1})(\d{0,4})(\d{0,4})/);
+                               this.value = !x[2] ? x[1] : x[1] + '-' + x[2] + (x[3] ? '-' + x[3] : '')+(x[4] ? '-' + x[4] : '');"
+                               [formControl]="phoneNumber" type="text"
+                               class="register-input form-control phone-textbox-align" id="phoneNumber"
+                               placeholder="Teléfono móvil">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row"
+                 [ngClass]="{'has-error': (!address.valid && address.touched), 'has-success': (address.valid && address.touched)}">
+                <input maxlength="40" [formControl]="address" type="text" class="register-input form-control"
+                       id="inputaddress" placeholder="Dirección de Residencial">
+            </div>
+
+            <div class="form-group row">
+                <input maxlength="40" [formControl]="passport" type="text" class="register-input form-control"
+                       id="inputpassport" placeholder="Número de pasaporte (opcional)">
+            </div>
+
+            <card-details></card-details>
+
+            <div style="margin-bottom: -5px; margin-top: 35px;" class="form-group col-md-12 col-sm-12 padding-zero float-left full-width">
+                <div class="col-sm-12 col-md-12 padding-zero">
+                    <button [disabled]="!form.valid || submitted" type="submit" class="btn btn-default btn-auth">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    </div>
+
+    </div>

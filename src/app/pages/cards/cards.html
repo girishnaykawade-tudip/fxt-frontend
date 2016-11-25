@@ -1,0 +1,31 @@
+<div class="cards-bg" >
+    <div style=" padding-top: 80px; padding-left: 30px;" class="full-width" >
+        <div style="width: 32%;
+    float: right;"><img class="" style="width: 32%" src="/assets/img/fxt_logo.png"></div>
+        <ba-back-page></ba-back-page>
+    </div>
+
+
+<div style="" class=" middle-span login-form" >
+    <div style=" padding-left: 76px; margin-bottom: 30px;">
+      <h1 style="" >{{card_type}}</h1>
+    </div>
+
+    <div class="container"  >
+        <ul class="row"  >
+            <li class="col-md-4 col-xs-6 " *ngFor="let a of fakeArray; let index = index" style="list-style: none">
+                <!--<ba-card class="col-xlg-4 col-xl-4 col-lg-12 col-sm-12 col-xs-12"-->
+                <ba-card class=""
+                         title="{{ fakeArray[index] }}" cardtype= {{card_type}} cardRate= {{curr}} cardInital={{type}} baCardClass="traffic-panel medium-card">
+                </ba-card>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="apps"  style="padding-top: 0;">
+        <div class="call-center" >
+            <div> En Linea</div>
+            <img src="/assets/img/call-center.png">
+        </div>
+    </div>
+</div>

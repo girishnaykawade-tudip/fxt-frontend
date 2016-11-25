@@ -1,0 +1,42 @@
+<div style=" ">
+    <div class="auth-main add-user card-form" style=" position:relative;">
+        <div class="card-form-head">
+            <div class="full-width">
+                <h1>Physical</h1>
+            </div>
+            <div class="form-group" *ngIf="invalidInput">
+                <label for="inputError" class="">
+                </label>
+                <div class="col-sm-10" *ngIf="invalidInput" class="invalid-password">
+                    <span [innerHTML]="registerError"></span>
+                </div>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal register-form float-left"
+                  style="padding: 0;">
+
+                <div class="form-group row"
+                     [ngClass]="{'has-error': (!userId.valid && userId.touched), 'has-success': (userId.valid && userId.touched)}">
+                    <input maxlength="40"
+                           onkeyup="var x =this.value.replace(/\D/g, '').match(/(\d{0,9})/);
+                           this.value = x[1]"
+                           [formControl]="userId" type="text" class="register-input form-control"  id="userId" placeholder="User Id">
+                </div>
+
+                <div class="form-group row"
+                     [ngClass]="{'has-error': (!proxy_number.valid && proxy_number.touched), 'has-success': (proxy_number.valid && proxy_number.touched)}">
+                    <input maxlength="15"
+                           onkeyup="var x =this.value.replace(/\D/g, '').match(/(\d{0,15})/);
+                           this.value = x[1]"
+                           [formControl]="proxy_number" type="text" class="register-input form-control"
+                           id="proxy_number" placeholder="Proxy Number">
+                </div>
+
+                <div class="form-group col-md-12 col-sm-12 padding-zero float-left full-width">
+                    <div class="col-sm-12 col-md-12 padding-zero">
+                        <button [disabled]="!form.valid || submitted" type="submit" class="btn btn-default btn-auth">Activar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

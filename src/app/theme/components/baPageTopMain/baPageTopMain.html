@@ -1,0 +1,29 @@
+<div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
+     [ngClass]="{scrolled: isScrolled}" style="background-image:url('/assets/img/header.png')" >
+    <div class="custom_name">
+        <span><b>Bienvenido</b>/ {{name}}</span>
+    </div>
+    <div class="user-profile clearfix">
+        <div class="dropdown al-user-profile" style="font-size: 13px; margin: 6px 15px 0px 0px !important; width: 60%">
+            <!--<div style="text-align: center;">-->
+                <!--&lt;!&ndash;<a class="btn" href="http://localhost:3000/#/login"> <span class="wsite-button-inner">Login</span> </a>&ndash;&gt;-->
+
+                <!--<a class=" btn profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false" style="float: left">-->
+                <!--&lt;!&ndash;<img src="{{ ( 'Nasta' | baProfilePicture ) }}">&ndash;&gt;-->
+                    <!--Español-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">-->
+                <!--&lt;!&ndash;<li class="dropdown-item"><i class="dropdown-arr"></i></li>&ndash;&gt;-->
+                <!--<li class="dropdown-item"><a href><i class="fa fa-user"></i>perfil</a></li>-->
+                <!--<li class="dropdown-item"><a href><i class="fa fa-cog"></i>Settings</a></li>-->
+                <!--&lt;!&ndash;<li class="dropdown-item"></li>&ndash;&gt;-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<a style="float: left" class="btn" href><i class="fa fa-user"></i> Perfil</a>-->
+            <a href style="float: left" class=" btn signout"  (click)="logoutSession()">
+                <!--<i class="fa fa-sign-out"></i>  -->
+                Cerrar sesión
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="add-bg">
+    <div class=" padding-zero col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div style="position: relative; top: 85px;width: 30%;left: 20px;">
+            <ba-back-page></ba-back-page>
+        </div>
+        <div style="width: 90%;margin-left: auto;margin-right: auto;">
+            <div class="cards col-sm-12 col-md-12" style="margin-top: 30px">
+                <div class="checkout-main">
+                    <div class="auth-main register-form" style=" position:relative; width: 100%;height: 27%">
+                        <div class="checkout-block">
+                            <div class="header-block">
+                                <h1>CONFIRMA TU ORDEN</h1>
+                            </div>
+                            <div class="lable-block">
+                                <div class="lable">SE CARGARA EN TU TERJETA USD $ {{ Data['param2'] | number :
+                                    '1.2-2'}}
+                                </div>
+                                <div class="checkout-grid">
+                                    <div style="width: 70%; margin: auto;">
+                                        <div class="grid-text">
+                                        <span class="col-sm-12 col-md-12">
+                                            <div class=" span1 col-sm-6 col-md-6">CARGARA</div>
+                                            <div class=" span2 col-sm-6 col-md-6">$ {{ Data['param1'] | number : '1.0-2' }}</div>
+                                        </span>
+                                            <span class="col-sm-12 col-md-12">
+                                            <div class=" span1 col-sm-6 col-md-6">COMISION</div>
+                                            <div class="span2 col-sm-6 col-md-6">$ {{ Data['param3'] | number : '1.0-2' }}</div>
+                                        </span>
+                                            <span style="padding-top: 25px" class="col-sm-12 col-md-12">
+                                            <div class="span1 col-sm-6 col-md-6">TOTAL</div>
+                                            <div class="span2 col-sm-6 col-md-6">$ {{ Data['param4'] | number : '1.0-2' }}</div>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cards col-sm-12 col-md-12 padding-zero" style="margin-top: 30px">
+                                <div class="cards col-sm-6 col-md-6 padding-zero" style="margin-top: 30px">
+                                    <div class="checkout-main stick-cards">
+                                        <div class="auth-main register-form"
+                                             style=" position:relative; width: 100%;height: 27%">
+                                            <div class="checkout-block" (click)="saveData(this)">
+                                                <div class="header-block">
+                                                    <h1>CARGA BANCARIA AUTOMATICA</h1>
+                                                </div>
+                                                <div class="img-block">
+                                                    <img style="width: 40%" src="../../../assets/img/logo_khipu.png"
+                                                         alt="simplified transfer">
+                                                </div>
+                                                <div class="content-block">
+                                                    <p>khipu es una aplicación simple y segura para pagar contu
+                                                        banco a través de una transferencia, evita erroresal
+                                                        escribir datos y brinda protección adicional contraalgunos
+                                                        tipos de ataque, como lo son el Phishing y laclonación de
+                                                        datos. Si no has instalado la aplicación,la página de pago
+                                                        te ayudará a instalarla. ESTA ES LAOPCIÓN RECOMENDADA.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cards col-sm-6 col-md-6 padding-zero" style="margin-top: 30px">
+                                    <div class="checkout-main stick-cards" style="float: right;">
+                                        <div class="auth-main register-form"
+                                             style=" position:relative; width: 100%;height: 27%">
+                                            <div class="checkout-block" (click)="order(this)">
+                                                <div class="header-block">
+                                                    <h1>PAGO EN EFECTIVO-BANKO</h1>
+                                                </div>
+                                                <div class="img-block">
+                                                    <img style="width:  22.2%" src="../../../assets/img/logo_banco.png"
+                                                         alt="bank transfer">
+                                                </div>
+                                                <div class="content-block">
+                                                    <p>Realiza tu recarga directamente depositando en efectivo en
+                                                        nuestra cuenta del Banco Estado o del Banco Itau. Tu abono será
+                                                        realizado una vez el deposito se haya hecho en el banco. a
+                                                        diferencia de la transferencia puede demorar en aparecer en tu
+                                                        cuenta, aproximadamente 20 minutos. En caso de que se demore mas
+                                                        comunicate por el chat de esta pagina, o a nues- tros telefonos
+                                                        o correo electrónico.</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="apps"  style="padding-top: 0;">
+        <div class="call-center" >
+            <div> En Linea</div>
+            <img src="/assets/img/call-center.png">
+        </div>
+    </div>
+</div>
+
+

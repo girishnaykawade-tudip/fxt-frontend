@@ -1,0 +1,43 @@
+<!--logo image-->
+<!--<img style=" width: 80px;"-->
+<!--src="https://static.wixstatic.com/media/a514ac_2c13a655720b4b98830cd307cb74e1d9~mv2.png/v1/crop/x_0,y_21,w_480,h_255/fill/w_115,h_61,al_c,usm_0.66_1.00_0.01/a514ac_2c13a655720b4b98830cd307cb74e1d9~mv2.png">-->
+<!-- end logo image-->
+
+<div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
+     [ngClass]="{scrolled: isScrolled}">
+    <a routerLink="/pages/dashboard" class="al-logo clearfix">
+        <span class="plan-header-color"></span><span class="hub-header-color">
+  </span>
+    </a>
+    <!--<a (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>-->
+    <!--<a class="al-logo clearfix">Projects</a>-->
+    <!--<a class="al-logo clearfix top-nav-option">Subcontractors</a>-->
+    <!--<a class="al-logo clearfix top-nav-option" >Messages</a>-->
+    <!--<a class="al-logo clearfix top-nav-option">Activity</a>-->
+    <!--<div class="search">-->
+    <!--<i class="ion-ios-search-strong" ng-click="startSearch()"></i>-->
+    <!--<input id="searchInput" type="text" placeholder="Search for...">-->
+    <!--</div>-->
+    <login></login>
+    <div class="user-profile clearfix" style="float: left; display: none">
+        <div class="dropdown al-user-profile" style="font-size: 20px; margin: 6px 15px 0px 0px !important;">
+            <div style="text-align: center;">
+                <!--<a class="btn" href="http://localhost:3000/#/login"> <span class="wsite-button-inner">Login</span> </a>-->
+                <!--<a class="btn" href="http://localhost:3000/#/login"> <span>Login</span></a>-->
+
+
+                <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown"
+                   aria-expanded="false">
+                    <img src="{{ ( 'Nasta' | baProfilePicture ) }}">
+                </a>
+                <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
+                    <li class="dropdown-item"><i class="dropdown-arr"></i></li>
+                    <li class="dropdown-item"><a href><i class="fa fa-user"></i>Profile</a></li>
+                    <!--<li class="dropdown-item"><a href><i class="fa fa-cog"></i>Settings</a></li>-->
+                    <li class="dropdown-item"><a href class="signout" (click)="logoutSession()"><i
+                            class="fa fa-power-off"></i>Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

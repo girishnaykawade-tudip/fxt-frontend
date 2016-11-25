@@ -1,0 +1,89 @@
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade show in" id="register2" role="dialog">
+    <div class="modal-dialog auth-main">
+      <!-- Modal content-->
+      <div class="modal-content register-2-address">
+        <div class="modal-header padding-zero">
+          <div class="main-page-status">
+            <div class="planhub-logo-header-main"><img src="../../../assets/img/planhu-logo.png"></div>
+            <div class="steps-main">
+              <div class="float-left register-step-first">
+                <img class="float-left verified-icon-css" src="../../../assets/img/theme/icon-verified.svg">
+                <span class="create-your-account-text">Create your account</span>
+              </div>
+              <div class="float-left">
+                <div class="current-number-circle float-left">
+                  <div class="number-layer">2</div>
+                </div>
+                <span class="setup-your-company-text">Setup your company</span>
+              </div>
+              <div class="float-left register-step-third">
+                <div class="next-number-circle float-left">
+                  <div class="number-layer">3</div>
+                </div>
+                <span class="create-your-account-text padding-right-zero">Invite subcontractors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body padding-zero">
+          <form class="location-checking-form" (ngSubmit)="onSubmit(form.value)">
+            <div class="location-check-main-form">
+              <h3 class="header-text-location">
+                What’s the full address of your company?
+              </h3>
+              <p>
+                If your company is already in our database, we’re going to save you
+                some time and simpley add you as a team member.
+              </p>
+              <div class="form-group" *ngIf="invalidInput">
+                <label for="inputError" class="">
+                </label>
+                <div class="col-sm-10"  *ngIf="invalidInput"  class="invalid-password">
+                  <span [innerHTML]="invalidAddress"></span>
+                </div>
+              </div>
+              <div class="float-left col-sm-12 col-md-12 padding-zero">
+                <div class="col-md-12 col-sm-12 padding-zero margin-top-30px">
+                  <div class="form-group row first-name-textbox" [ngClass]="{'has-error': (!address.valid && address.touched), 'has-success': (address.valid && address.touched)}">
+                    <label for="address" class="float-left">Address</label>
+                    <div class="col-sm-12 col-md-12 padding-zero">
+                      <input [formControl]="address" name="address" maxlength="50" type="text" class="location-check-input form-control" id="address" placeholder="Address" >
+                    </div>
+                  </div>
+                  <div class="form-group row last-name-textbox" [ngClass]="{'has-error': (!stateName.valid && stateName.touched), 'has-success': (stateName.valid && stateName.touched)}">
+                    <label for="state" class="float-left">State</label>
+                    <div class="float-left">
+                      <input [formControl]="stateName" name="stateName" maxlength="25" type="text" class="location-check-input form-control" id="state" placeholder="State" >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12 padding-zero">
+                  <div class="form-group row first-name-textbox" [ngClass]="{'has-error': (!city.valid && city.touched), 'has-success': (city.valid && city.touched)}">
+                    <label for="city" class="float-left">City</label>
+                    <div class="col-sm-12 col-md-12 padding-zero">
+                      <input [formControl]="city" name="city" maxlength="25" type="text" class="location-check-input form-control" id="city" placeholder="City" >
+                    </div>
+                  </div>
+                  <div class="form-group row last-name-textbox" [ngClass]="{'has-error': (!zipcode.valid && zipcode.touched), 'has-success': (zipcode.valid && zipcode.touched)}">
+                    <label for="zipcode" class="float-left">Zip Code</label>
+                    <div class="float-left">
+                      <input [formControl]="zipcode" name="zipcode" maxlength="25" type="text" class="location-check-input form-control" id="zipcode" placeholder="Zip Code" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-12 col-sm-12 padding-zero float-left full-width">
+                <div class="col-sm-12 col-md-12 padding-zero">
+                  <button [disabled]="!form.valid || submitted" type="submit" class="btn btn-default btn-auth">Submit</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade in"></div>

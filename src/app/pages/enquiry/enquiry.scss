@@ -1,0 +1,33 @@
+@import '../../theme/sass/auth';
+
+// register page responsive
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .register-form .first-name-textbox,.register-form .last-name-textbox{
+     width: 100%;
+   }
+  .register-form .ext-textbox-align {
+    width: 28%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 16vh);
+  }
+}
+
+
+@media screen and (min-height: 550px) and (max-height: 600px) {
+  .register-form.auth-main{
+    height: calc(100% + 38vh);
+  }
+}
+
+@media screen and (min-height: 450px) and (max-height: 549px) {
+  .register-form.auth-main{
+    height: calc(100% + 63vh);
+  }
+}
